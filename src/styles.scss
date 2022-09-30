@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+
+@font-face {
+    font-family: 'proxima';
+    src: url('./assets/fonts/fontspring-demo-proximanova-bold-webfont.woff2') format('woff2'),
+        url('./assets/fonts/fontspring-demo-proximanova-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 100;
+    line-height: 1.5rem;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+input {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid grey;
+    border-radius: 40px;
+    padding: 10px;
+    outline: none;
+    padding-inline-start: 20px;
+    width: 250px;
+}
