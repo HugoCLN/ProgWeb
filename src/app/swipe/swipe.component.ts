@@ -14,7 +14,7 @@ export class SwipeComponent implements OnInit {
   constructor(private userApi: UserApiService) { }
 
   ngOnInit(): void {
-    this.getUsers(10);
+    this.getUsers(1);
   }
 
   getUsers(amount: number){
