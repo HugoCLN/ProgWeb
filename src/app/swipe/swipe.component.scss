@@ -1,0 +1,206 @@
+.page {
+    display: flex;
+}
+.left-section {
+    width: 450px;
+    height: 100vh;
+    background-color: white;
+    border-right: 1px solid #dbe2e5;
+    .header {
+        width: 100%;
+        height: 70px;
+        background: linear-gradient(90deg, rgba(214,49,118,1) 0%, rgba(224,115,95,1) 100%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.2rem;
+        gap: 2rem;
+        color: white;
+.profile-my-profile {
+    margin-left: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+        .menu {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 2rem;
+            cursor: pointer;
+        }
+        
+        .profile-pic {
+            box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.026), 0px 1px 1px rgba(0, 0, 0, 0.012), 0px 2px 4px rgba(0, 0, 0, 0.11);
+            cursor: pointer;
+            border-radius: 50%;
+            border: 2px solid white;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            img {
+                width: 60px;
+                border-radius: 50%;
+            }
+        }
+
+    } 
+    .sub-header {
+        width: 100%;
+        height: 120px;
+        background-color: #eef4f6;
+        border-bottom: 1px solid #dbe2e5;
+        display: flex;
+        align-items: center;
+        box-shadow: inset 0px 5px 4px -3px rgba(0, 0, 0, 0.432);
+        .let-swipe {
+            display: flex;
+            align-items: center;
+
+            .text-container {
+               margin-left: 2rem;
+               width: 50%;
+                h1 {
+                    font-size: 1rem;
+                }
+                p {
+                    font-size: 0.8rem;
+                }
+            } 
+            .icon {
+                margin-left: 1rem;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                background-color: white;
+                border: 3px solid #aa366c;
+                display: flex;
+                img {
+                    margin: auto;
+                    width: 70px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+    .bottom-container {
+        padding: 1rem;
+        h1 {
+            color: #aa366c;
+            font-weight: 700;
+        }
+        .favourites-list {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 1rem;
+            .favourites-card {
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+             text-align: center;
+             cursor: pointer;
+             img {
+                border-radius: 50%;
+             }
+            }
+        }
+    }
+}
+
+.right-section {
+    width: 70vw;
+    height: 100vh;
+    background-color: #f4fafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .switch-button-container {
+        width: 60px;
+        height: 30px;
+        position: absolute;
+        background-color: rgba(128, 128, 128, 0.296);
+        box-shadow: inset 0px 5px 4px -3px rgba(0, 0, 0, 0.432);
+        top: 1rem;
+        right: 1rem;
+        border-radius: 40px;
+        display: flex;
+        align-items: center;
+        .switch {
+            margin-left: 1px;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: white;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        .switched {
+            margin-left: 29px;
+            transition: 0.6s;
+        }
+    }
+}
+
+.dark-page {
+    .left-section {
+        background-color: #242831;
+        border-right: 1px solid black;
+
+        .favourites-card {
+            color: white;
+        }
+        .sub-header {
+            background-color: #393d44;
+            border-bottom: none;
+            .icon {
+                background-color: #393d44;
+            }
+        }
+        h1, p {
+            color: white;
+        }
+    }
+
+    .right-section {
+        background-color: #393d44;
+    }
+} 
+
+.settings-container {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    top: 5px;
+    left: 405px;
+    display: flex;
+    justify-content: space-between;
+    .right {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 170px;
+        height: 100%;
+        border-radius: 3px;
+        background-color: white;
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.026), 0px 1px 1px rgba(0, 0, 0, 0.012), 0px 2px 4px rgba(0, 0, 0, 0.11);
+    }
+    .left {
+        .arrow {
+            background-color: white;
+            width: 20px;
+            height: 20px;
+            left: 25px;
+            top: 25px;
+            position:absolute;
+            transform: rotate(45deg);
+        }
+    }
+}
