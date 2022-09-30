@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class LoginComponent implements OnInit {
 
   @Output() closePopup = new EventEmitter<boolean>()
-  constructor() { }
+  constructor(private router: Router) { }
 
 
   ngOnInit(): void {
@@ -16,6 +17,10 @@ export class LoginComponent implements OnInit {
 
   clicCroix() {
     this.closePopup.emit(true);
+  }
+
+  goToSwipe() {
+    this.router.navigate(["/swipe"]);
   }
 
 }
