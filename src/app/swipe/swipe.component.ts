@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../user';
+import { UserApiService } from '../user-api.service';
 
 @Component({
   selector: 'app-swipe',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SwipeComponent implements OnInit {
 
-  constructor() { }
+  users: Array<User>
+
+  constructor(private userApi: UserApiService) { }
 
   ngOnInit(): void {
+    this.getUsers(10);
   }
+
+  getUsers(amount: number){
+    this.userApi.getUsers(amount).subscribe((results: Array<User>) =>{
+      this.users = results;
+    });
+  }
+
+
+
 
 }
