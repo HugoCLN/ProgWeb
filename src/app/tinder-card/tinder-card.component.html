@@ -1,16 +1,16 @@
 <div class="card-container">
   <img
     class="profile-picture"
-    src=""
-    alt="profile-picture"
+    src="{{user.picture.large}}"
+    alt={profile-picture}
   />
   <div class="description">
     <div class="name-container">
-      <h1>Prénom Nom</h1>
+      <h1>{{user.name.first}} {{user.name.last}}</h1>
     </div>
     <div class="country">
       <!-- <mat-icon fontSet="material-icons-outlined">person_pin_circle</mat-icon> -->
-      <p>Pays</p>
+      <p>{{user.location.country}}</p>
     </div>
     <div class="buttons-container">
       <button>

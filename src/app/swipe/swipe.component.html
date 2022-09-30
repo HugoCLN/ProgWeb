@@ -31,6 +31,8 @@
   </section>
   <section class="right-section">
     <!-- Implémenter l'appel à un composant tinder-card -->
-    <app-tinder-card></app-tinder-card>
+    <ng-container *ngFor="let user of users">
+      <app-tinder-card [user]="user"></app-tinder-card>
+    </ng-container>
   </section>
 </div>
