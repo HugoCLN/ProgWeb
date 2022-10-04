@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { User } from '../user';
 import { UserApiService } from '../user-api.service';
 
@@ -13,18 +14,34 @@ export class SwipeComponent implements OnInit {
   user_index : number = 0
   credits: number = 5
 
+  male : boolean = true
+  female : boolean = true
+
   users: Array<User>
   fav_users : Array<User>
 
-  constructor(private userApi: UserApiService) { }
+  constructor(
+    private userApi: UserApiService,
+    private route : ActivatedRoute 
+    ) { }
 
   ngOnInit(): void {
+    this.fav_users = []
+
+    // faire la gestion de la route pour le genre des profils
+    // recuperer male et female depuis la route
+    this.route.queryParams.subscribe(params => {
+      this.male = (params['male'] == "true") ? true : false
+      this.female = (params['female'] == "true") ? true : false
+
     this.getUsers(this.nbusers)
-    this.fav_users = new Array<User>
+
+    })
+
   }
 
   getUsers(amount: number){
-    this.userApi.getUsers(amount).subscribe((results: Array<User>) =>{
+    this.userApi.getUsers(amount, this.male, this.female).subscribe((results: Array<User>) =>{
       this.users = results;
       this.user_index = 0;
     });
