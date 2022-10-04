@@ -9,8 +9,9 @@ import { UserApiService } from '../user-api.service';
 })
 export class SwipeComponent implements OnInit {
 
-  nbusers : number = 20
+  nbusers : number = 5
   user_index : number = 0
+
   users: Array<User>
   favusers : Array<User>
 
@@ -29,16 +30,14 @@ export class SwipeComponent implements OnInit {
   next_person(button_pushed:boolean, user: User)
   {
     if(this.user_index < this.nbusers){
-      this.user_index = this.user_index + 1;
-    }
-    else{
       this.getUsers(this.nbusers);
       this.user_index = 0;
     }
-
+    else{
+      this.user_index = this.user_index + 1;
+    }
     if (button_pushed){
       this.add_favuser(user);
-
     }
   }
 

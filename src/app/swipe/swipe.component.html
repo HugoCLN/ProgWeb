@@ -27,7 +27,9 @@
       <div class="favourites-list">
         <!-- Vous afficherez ici les profils tinder pour lequel l'utilisateur à swiper à droite -->
         <ng-container *ngFor="let favurser of favusers">
-          <img src="{{favurser.picture.thumbnail}}" alt=""/>
+          <div class="favourites-card">
+            <img src="{{favurser.picture.thumbnail}}" alt=""/>
+          </div>
         </ng-container>
       </div>
     </div>
