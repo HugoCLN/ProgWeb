@@ -3,15 +3,50 @@
     <h1>Connexion</h1>
     <div>
       <h1>Adresse mail :</h1>
-      <input type="email" placeholder="Adresse mail">
+      <input formControlName="email" type="email" placeholder="Adresse mail" />
     </div>
 
     <div>
       <h1>Mot de passe :</h1>
-      <input type="password" placeholder="Mot de passe">
+      <input
+        formControlName="password"
+        type="password"
+        placeholder="Mot de passe"
+      />
+    </div>
+
+    <div class="choose-gender">
+      <div class="top-box">
+        <h1>Que cherchez vous ?</h1>
+      </div>
+      <div class="mid-box">
+        <input
+          class="male"
+          formControlName="male"
+          type="checkbox"
+          id="male"
+          name="male"
+        />
+        <h2>Hommes</h2>
+      </div>
+      <div class="bot-box">
+        <input
+          class="female"
+          formControlName="female"
+          type="checkbox"
+          id="female"
+          name="female"
+        />
+        <h2>Femmes</h2>
+      </div>
     </div>
 
     <button (click)="goToSwipe()">Connexion</button>
-    <img class="iconFermer" src="../../assets/img/fermer-la-croix.png" alt="icon fermer croix" (click)="clicCroix()" >
+    <img
+      class="iconFermer"
+      src="../../assets/img/fermer-la-croix.png"
+      alt="icon fermer croix"
+      (click)="clicCroix()"
+    />
   </div>
 </div>
