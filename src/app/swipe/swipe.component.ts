@@ -13,12 +13,13 @@ export class SwipeComponent implements OnInit {
   user_index : number = 0
 
   users: Array<User>
-  favusers : Array<User>
+  fav_users : Array<User>
 
   constructor(private userApi: UserApiService) { }
 
   ngOnInit(): void {
     this.getUsers(this.nbusers)
+    this.fav_users = new Array<User>
   }
 
   getUsers(amount: number){
@@ -43,6 +44,6 @@ export class SwipeComponent implements OnInit {
 
   add_favuser(user : User)
   {
-    this.favusers.push(user)
+    this.fav_users.push(user)
   }
 }
