@@ -24,6 +24,7 @@ export class SwipeComponent implements OnInit {
   getUsers(amount: number) {
     this.userApi.getUsers(amount).subscribe((results: Array<User>) => {
       this.users = results;
+      this.user_index = 0;
     });
   }
 
@@ -44,7 +45,6 @@ export class SwipeComponent implements OnInit {
   reload_users() {
     if (this.credits > 0) {
       this.getUsers(this.nbusers);
-      this.user_index = 0;
       this.credits--;
     }
   }

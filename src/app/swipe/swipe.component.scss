@@ -123,12 +123,19 @@
     align-items: center;
 
     .reload-container {
-        margin-left: 1000px;
+        margin-left: 1px;
         width: 28px;
         height: 28px;
         position: absolute;
         display: flex;
         justify-content: center;
+
+        top: 1rem;
+        left: 480px;
+
+        button {
+            background: none !important;
+        }
     }
 
     .card-container {
