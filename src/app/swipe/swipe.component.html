@@ -35,7 +35,7 @@
     </div>
   </section>
   <section class="right-section">
-    <div class="reload-container">
+    <div *ngIf="user_index === nbusers" class="reload-container">
       <button (click)="reload_users()" class="reload-button">
         <img src="../../assets/img/piggy_bank.png" alt="" />
       </button>
