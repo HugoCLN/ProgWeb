@@ -28,16 +28,27 @@
         <!-- Vous afficherez ici les profils tinder pour lequel l'utilisateur à swiper à droite -->
         <ng-container *ngFor="let favurser of favusers">
           <div class="favourites-card">
-            <img src="{{favurser.picture.thumbnail}}" alt=""/>
+            <img src="{{ favurser.picture.thumbnail }}" alt="" />
           </div>
         </ng-container>
       </div>
     </div>
   </section>
   <section class="right-section">
-    <!-- Implémenter l'appel à un composant tinder-card -->
-    <ng-container *ngFor="let user of users; let i = index">
-      <app-tinder-card *ngIf="i===user_index" (button_pushed)= "next_person($event, user)" [user]="user"></app-tinder-card>
-    </ng-container>
+    <div class="reload-container">
+      <button (click)="reload_users()" class="reload_button">
+        <img src="../../assets/img/piggy_bank.png" alt="" />
+      </button>
+    </div>
+    <div class="card-container">
+      <!-- Implémenter l'appel à un composant tinder-card -->
+      <ng-container *ngFor="let user of users; let i = index">
+        <app-tinder-card
+          *ngIf="i === user_index"
+          (button_pushed)="next_person($event, user)"
+          [user]="user"
+        ></app-tinder-card>
+      </ng-container>
+    </div>
   </section>
 </div>

@@ -28,8 +28,9 @@ export class SwipeComponent implements OnInit {
   }
 
   next_person(button_pushed: boolean, user: User) {
-    if (this.user_index > this.nbusers) {
+    if (this.user_index < this.nbusers) {
       this.user_index = this.user_index + 1;
+
       if (button_pushed) {
         this.add_favuser(user);
       }
