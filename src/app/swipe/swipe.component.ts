@@ -26,7 +26,7 @@ export class SwipeComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.fav_users = new Array<User>
+    this.fav_users = []
 
     // faire la gestion de la route pour le genre des profils
     // recuperer male et female depuis la route
