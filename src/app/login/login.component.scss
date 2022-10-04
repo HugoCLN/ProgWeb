@@ -12,7 +12,7 @@
 .popup {
   background-color: white;
   width: 30%;
-  height: 60%;
+  height: 70%;
 
   display: flex;
   flex-direction: column;
@@ -26,7 +26,7 @@
 
   .choose-gender {
     width: 90%;
-    height: 60%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,7 +44,7 @@
       align-items: center;
 
       .male {
-      color: violet;
+        color: violet;
         // position: absolute;
       }
     }
