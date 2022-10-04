@@ -14,9 +14,28 @@ export class UserApiService {
       .get('https://randomuser.me/api/?results=20')
   }
 
-  getUsers(amount: number) {
+  getUsers(amount: number, male : boolean, female : boolean) {
+    var gender : string = 'all'
+
+    if(male == true)
+    {
+      if(female ==true) 
+      {
+        gender = 'all'
+      }
+      else{
+        gender='male'
+      }
+    }
+    else if(female == true){
+      gender = 'female'
+    }
+    else{
+      gender = 'all'
+    }
+    
     return this.http
-      .get(`https://randomuser.me/api/?results=${amount}`)
+      .get(`https://randomuser.me/api/?results=${amount}&gender=${gender}`)
       .pipe(map((res:any) => res.results))
   }
 }
