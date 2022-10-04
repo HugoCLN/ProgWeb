@@ -99,16 +99,13 @@
             flex-wrap: wrap;
             justify-content: flex-start;
             gap: 1rem;
-            .favourites-card {
-             display: flex;
-             flex-direction: column;
-             justify-content: center;
-             align-items: center;
-             text-align: center;
-             cursor: pointer;
-             img {
+            img{
+                margin-left: 1rem;
+                width: 80px;
+                height: 80px;
                 border-radius: 50%;
-             }
+                background-color: white;
+                display: flex;
             }
         }
     }
