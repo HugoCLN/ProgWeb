@@ -14,16 +14,21 @@ export class SwipeComponent implements OnInit {
   constructor(private userApi: UserApiService) { }
 
   ngOnInit(): void {
-    this.getUsers(1);
+    this.getUsers(1)
   }
 
   getUsers(amount: number){
     this.userApi.getUsers(amount).subscribe((results: Array<User>) =>{
-      this.users = results;
+      this.users = results
     });
   }
 
+  next_person(button_pushed:boolean)
+  {
+    if (button_pushed){
+      //Executer la fonction de store
+    }
 
-
-
+    this.getUsers(1)
+  }
 }

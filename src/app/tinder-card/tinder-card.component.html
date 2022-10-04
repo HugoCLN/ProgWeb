@@ -13,7 +13,7 @@
       <p>{{user.location.country}}</p>
     </div>
     <div class="buttons-container">
-      <button>
+      <button (click)="onDislike()"> 
         <svg
           focusable="false"
           aria-hidden="true"
@@ -29,10 +29,10 @@
           ></path>
         </svg>
       </button>
-      <button class="super">
+      <button (click)="onSuperLike()" class="super">
         <img src="../../assets/img/superlike.png" alt="" />
       </button>
-      <button>
+      <button (click)="onLike()">
         <img src="../../assets/img/like.png" alt="" />
       </button>
     </div>

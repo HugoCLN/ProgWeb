@@ -32,7 +32,7 @@
   <section class="right-section">
     <!-- Implémenter l'appel à un composant tinder-card -->
     <ng-container *ngFor="let user of users">
-      <app-tinder-card [user]="user"></app-tinder-card>
+      <app-tinder-card (button_pushed)= "next_person($event)" [user]="user"></app-tinder-card>
     </ng-container>
   </section>
 </div>

@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { flatMap } from 'rxjs';
 import { User } from '../user';
 
 @Component({
@@ -9,9 +10,22 @@ import { User } from '../user';
 export class TinderCardComponent implements OnInit {
 
   @Input() user: User
+  @Output() button_pushed = new EventEmitter<boolean>()
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onLike(){
+    this.button_pushed.emit(true)
+  }
+
+  onSuperLike(){
+    this.button_pushed.emit(true)
+  }
+
+  onDislike(){
+    this.button_pushed.emit(false)
   }
 
 }
