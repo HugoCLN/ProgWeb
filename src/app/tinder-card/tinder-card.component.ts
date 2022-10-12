@@ -16,6 +16,7 @@ export class TinderCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //Les trois fonctions suivantes correspondent à l'envoi des données selon l'appui fait par l'utilisateur (like, super like ou dislike)
   onLike(){
     this.button_pushed.emit(true)
   }
