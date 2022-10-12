@@ -11,7 +11,7 @@ export class LoginComponent implements OnInit {
 
   @Output() closePopup = new EventEmitter<boolean>()
 
-  loginform = new FormGroup({
+  loginform = new FormGroup({           //Les formgroups servent à récupérer les données afin de pouvoir les transmettre via l'URL
     male : new FormControl(),
     female : new FormControl(),
     password : new FormControl(),
@@ -32,10 +32,10 @@ export class LoginComponent implements OnInit {
   }
 
   clicCroix() {
-    this.closePopup.emit(true);
+    this.closePopup.emit(true);         //Fonction exécutée au moment de l'appui sur la croix, afin de fermer la pop up de connexion
   }
 
-  goToSwipe() {
+  goToSwipe() {                         //Fonction d'ajout des informations récupérées avec les formgroup dans l'URL
     this.router.navigate(["/swipe"]);
 
     console.log("male : " + this.loginform.controls["male"].value);
