@@ -12,14 +12,15 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {                //Initialisation de la pop up, pour qu'elle ne s'affiche pas au démarrage
     this.afficherPopup = false
   }
 
-  switchPopup() {
+  switchPopup() {                   //Fonction exécutée afin d'ouvrir la pop up, au moment de l'appui sur le bouton connexion
     this.afficherPopup = ! this.afficherPopup;
   }
-  fermerMaPopup(closePopup : boolean) {
+
+  fermerMaPopup(closePopup : boolean) {   //Fonction pour fermer la pop up
     if (closePopup) {
       this.switchPopup();
     }
