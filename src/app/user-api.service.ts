@@ -34,6 +34,7 @@ export class UserApiService {
       gender = 'all'
     }
     
+    // on vient recuperer des profils avec dans l'url le nombre et le genre demande
     return this.http
       .get(`https://randomuser.me/api/?results=${amount}&gender=${gender}`)
       .pipe(map((res:any) => res.results))
