@@ -50,9 +50,11 @@ export class SwipeComponent implements OnInit {
   next_person(button_pushed:boolean, user: User)
   {
     if (this.user_index < this.nbusers) {
+      // si il reste des profils a afficher passer au profil suivant
       this.user_index = this.user_index + 1;
 
       if (button_pushed) {
+        // si like alors on ajoute le profil a la liste des profils favoris
         this.add_favuser(user);
       }
     }
@@ -64,6 +66,7 @@ export class SwipeComponent implements OnInit {
   }
 
   reload_users() {
+    // permet de recharger une liste de profils
     if (this.credits > 0) {
       this.getUsers(this.nbusers);
       this.credits--;
